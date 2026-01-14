@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Paprika&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f7f5ef;
+    background: radial-gradient(ellipse at top left, #fff8e8 60%, #f5e4de 100%), url('images/incense-bg.png') repeat-y left top fixed;
     color: #2d2424;
+}
+.incense-smoke {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 85px;
+    width: 120px;
+    opacity: 0.32;
+    pointer-events: none;
+    z-index: 0;
 }
 header {
     background: #be9b7b;
     padding: 1rem;
+    box-shadow: 0 2px 10px 0 #91704722;
 }
 header h1 {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 2.7rem;
     color: #fff;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes', cursive, Arial, sans-serif;
+    text-shadow: 2px 2px 12px #a4885fa9;
 }
 nav ul {
     list-style: none;
@@ -29,32 +46,50 @@ nav a {
     color: #fff;
     font-weight: 500;
     transition: color 0.2s;
+    font-family: inherit;
+    text-shadow: 1px 1px 3px #664d21ba;
+    font-size: 1.12rem;
 }
 nav a:hover {
     color: #ffd9b3;
+    text-shadow: 0 2px 18px #eeb97f77;
 }
 main {
     padding: 2rem;
+    position: relative;
+    z-index: 1;
 }
 .hero {
     text-align: center;
     margin-bottom: 2rem;
+    position: relative;
 }
 .hero-img {
     max-width: 360px;
     width: 100%;
     margin-top: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 6px 16px 0 #be9b7b33;
+    box-shadow: 0 6px 16px 0 #be9b7b33, 0 0px 64px 0px #fff0c522;
+    border: 3px solid #eec591;
+    background: #fffdec99;
 }
 .product-highlight {
     text-align: center;
+    margin-top: 3rem;
 }
 .product-highlight img {
     max-width: 240px;
     width: 100%;
     border-radius: 10px;
     margin-bottom: 1rem;
+    border: 2px solid #efc484;
+}
+.product-highlight h3 {
+    font-family: 'Paprika', cursive, Arial, sans-serif;
+    color: #a3691d;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    margin-top: 0.1em;
 }
 .product-list {
     display: flex;
@@ -63,18 +98,31 @@ main {
     justify-content: center;
 }
 .product-item {
-    background: #fff6ee;
+    background: #fff6eecc;
     border-radius: 12px;
-    box-shadow: 0 4px 12px 0 #be9b7b22;
+    box-shadow: 0 4px 12px 0 #be9b7b22, 0 8px 24px 0 #fbc38e22;
     padding: 1.8rem;
     width: 300px;
     text-align: center;
+    border: 1.6px solid #eec591;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .product-item img {
     max-width: 130px;
     width: 100%;
     margin-bottom: 1rem;
     border-radius: 7px;
+    border: 1.3px solid #e7a94f;
+    background: #fbeee2;
+    transition: box-shadow 0.2s;
+}
+.product-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 24px 0 #daa84744;
+}
+.product-item img:hover {
+    box-shadow: 0 6px 18px #e9cc9e99;
 }
 footer {
     background: #be9b7b;
@@ -82,6 +130,8 @@ footer {
     text-align: center;
     margin-top: 3rem;
     padding: 1rem 0;
+    box-shadow: 0 -1px 16px 0 #eac89e51;
+    font-family: 'Paprika', cursive, Arial, sans-serif;
 }
 .about-img {
     max-width: 350px;
@@ -89,6 +139,14 @@ footer {
     border-radius: 10px;
     display: block;
     margin-bottom: 1.5rem;
+    border: 2px solid #efc484;
+}
+.gst-img {
+    max-width: 210px;
+    margin: 24px 0 0 0;
+    box-shadow: 0 2px 10px #ce95581b;
+    border-radius: 5px;
+    border: 1px solid #eec591;
 }
 .contact-form {
     background: #fff6ee;
@@ -98,6 +156,7 @@ footer {
     width: 100%;
     max-width: 430px;
     margin-bottom: 2rem;
+    border: 1.4px solid #eec591;
 }
 .contact-form label {
     display: block;
@@ -113,20 +172,42 @@ footer {
     font-size: 1rem;
 }
 .contact-form button {
-    background: #be9b7b;
-    color: #fff;
+    background: linear-gradient(90deg,#be9b7b 60%,#e9cc9e);
+    color: #fff6ec;
     border: none;
     padding: 0.7rem 1.5rem;
     border-radius: 8px;
     margin-top: 1rem;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 0 1px 8px #ddb57d55;
+    transition: background 0.2s, color 0.2s;
 }
 .contact-form button:hover {
     background: #a67c52;
+    color: #fff;
 }
 .contact-info p {
     margin: 0.5rem 0;
     font-size: 1.1rem;
+}
+@keyframes incenseSmoke {
+    0% {
+        opacity: .2;
+        filter: blur(0px);
+        transform: translateY(0) scaleX(1);
+    }
+    50% {
+        filter: blur(2px);
+        opacity: .27;
+        transform: translateY(-16px) scaleX(1.1);
+    }
+    100% {
+        opacity: .11;
+        filter: blur(3px);
+        transform: translateY(-40px) scaleX(.9);
+    }
+}
+.incense-smoke {
+    animation: incenseSmoke 6s linear infinite alternate;
 }
