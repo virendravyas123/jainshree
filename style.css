@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f5ef;
+    color: #2d2424;
+}
+header {
+    background: #be9b7b;
+    padding: 1rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #fff;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+nav ul li {
+    display: inline;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #ffd9b3;
+}
+main {
+    padding: 2rem;
+}
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.hero-img {
+    max-width: 360px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px 0 #be9b7b33;
+}
+.product-highlight {
+    text-align: center;
+}
+.product-highlight img {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.product-item {
+    background: #fff6ee;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px 0 #be9b7b22;
+    padding: 1.8rem;
+    width: 300px;
+    text-align: center;
+}
+.product-item img {
+    max-width: 130px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+}
+footer {
+    background: #be9b7b;
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+}
+.about-img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.contact-form {
+    background: #fff6ee;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px 0 #be9b7b22;
+    width: 100%;
+    max-width: 430px;
+    margin-bottom: 2rem;
+}
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #be9b7b;
+    margin-top: 0.4rem;
+    font-size: 1rem;
+}
+.contact-form button {
+    background: #be9b7b;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #a67c52;
+}
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
